@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <script src="./src/script/script.js" defer></script>
+
+    <link rel="stylesheet" href="./src/style/style.css">
+
+    <title>Meu Controle Financeiro</title>
+
+</head>
+
+<body>
+
+    <header>
+
+        <div>
+
+            <p><img src="./src/assets/images/icons/Logo.png" alt="Icone de carteira">Meu Controle Financeiro</p>
+
+        </div>
+
+        <button id="deleteData" class="btn-desktop">
+
+            <img src="./src/assets/images/icons/icon_lixeira.png" alt="Icone de lixeira">Limpar dados
+
+        </button>
+
+        <div id="menu-toggle" class="menu-toggle">
+
+            <div class="menu"></div>
+
+            <div class="menu"></div>
+
+            <div class="menu"></div>
+
+        </div>
+
+        <div id="navegation-mobile" class="navegation-mobile">
+
+            <button id="deleteDataMobile">
+
+                <img src="./src/assets/images/icons/icon_lixeira.png" alt="Icone de lixeira">Limpar dados
+
+            </button>
+
+        </div>
+
+    </header>
+
+    <main>
+
+        <section class="saldo">
+
+            <div>
+
+                <p>saldo disponivel</p>
+
+                <h1 id="saldo"></h1>
+
+                <div class="btn">
+
+                    <button id="renda">+ Nova renda</button>
+
+                    <button id="despesa">- Nova despesa</button>
+
+                </div>
+
+            </div>
+
+            <div class="resumo-mensal">
+
+                <div class="value">
+
+                    <div class="img">
+
+                        <img src="./src/assets/images/icons/icone_seta.png" alt="icone seta">
+
+                    </div>
+
+                    <div>
+
+                        <p>Entrada no mês</p>
+
+                        <span id="somames"></span>
+
+                    </div>
+
+                </div>
+
+                <div class="value red">
+
+                    <div class="img">
+
+                        <img src="./src/assets/images/icons/icone_seta.png" alt="icone seta">
+
+                    </div>
+
+                    <div>
+
+                        <p>saida no mês</p>
+
+                        <span id="saidames"></span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="modal">
+
+            <div class="conteiner">
+
+                <form>
+
+                    <legend>Nova Renda</legend>
+
+                    <div>
+
+                        <label>De onde veio?</label>
+
+                        <input type="text" id="nomeRenda" placeholder="Ex: Salário, Freelance, Investimentos..."
+                            required>
+
+                    </div>
+
+                    <div>
+
+                        <label>valor</label>
+
+                        <input type="text" id="valorRenda" placeholder="R$ 0,00" required>
+
+                    </div>
+
+                    <div>
+
+                        <label>data</label>
+
+                        <input type="date" id="dateRenda" required>
+
+                    </div>
+
+                    <div class="conteiner_btn">
+
+                        <button type="button" id="closeModalRenda">Cancelar</button>
+
+                        <button type="submit" id="salvarRenda">Adicionar Renda</button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+            <div class="conteiner_despesas">
+
+                <form>
+
+                    <legend>Nova Despesa</legend>
+
+                    <div>
+
+                        <label>De onde veio?</label>
+
+                        <input type="text" id="nomeDespesa" placeholder="Ex: Faculdade, Aluguel, Supermercado..."
+                            required>
+
+                    </div>
+
+                    <div>
+
+                        <label>valor</label>
+
+                        <input type="text" id="valorDespesa" placeholder="R$ 0,00" required>
+
+                    </div>
+
+                    <div>
+
+                        <label>data</label>
+
+                        <input type="date" id="dateDespesa" required>
+
+                    </div>
+
+                    <div class="conteiner_btn">
+
+                        <button type="button" id="closeModalDespesas">Cancelar</button>
+
+                        <button type="submit" id="salvarDespesa">Adicionar Despesa</button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </section>
+
+        <section class="movimentacaoes">
+
+            <nav>
+
+                <h2>Movimentações</h2>
+
+                <ul>
+
+                    <li id="filtroTodos">Todos</li>
+
+                    <li id="filtroRendas">Rendas</li>
+
+                    <li id="filtroDespesas">Despesas</li>
+
+                </ul>
+
+            </nav>
+
+            <div>
+
+                <ul id="listamovimentacao" class="listamovimentacao">
+
+                </ul>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>

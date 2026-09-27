@@ -1,0 +1,421 @@
+@import url(./global.css);
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-xl);
+    box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.4);
+}
+
+header p {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-size: var(--text-18);
+    font-weight: bold;
+}
+
+header p img {
+    width: 15px;
+    height: 15px;
+}
+
+header button {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-sm) var(--space-xl);
+    cursor: pointer;
+    border: 0;
+    border-radius: 10px;
+    font-size: var(--text-14);
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+header button:hover {
+    background-color: var(--neutral);
+}
+
+.menu {
+    background-color: black;
+    height: 4px;
+    width: 100%;
+    transition: 0.5s ease;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.navegation-mobile {
+    display: none;
+    flex-direction: column;
+    background-color: var(--white);
+    padding: var(--space-xl);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+     transition: 0.5s ease;
+}
+
+.navegation-mobile.show {
+    display: flex;
+}
+
+main {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: var(--space-xl);
+}
+
+.saldo {
+    padding: var(--space-xl);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.4);
+    border-radius: 12px;
+}
+
+.saldo h1 {
+    font-size: var(--text-40);
+    font-weight: bold;
+}
+
+.saldo .btn {
+    display: flex;
+    align-content: center;
+    gap: var(--space-sm);
+    margin-top: var(--space-sm);
+}
+
+.saldo .btn button {
+    padding: 5px 25px;
+    border: 0;
+    border-radius: 5px;
+    color: var(--white);
+    cursor: pointer;
+    font-size: var(--text-16);
+    font-weight: bold;
+}
+
+#renda {
+    background-color: var(--success);
+}
+
+#despesa {
+    background-color: var(--red);
+}
+
+.resumo-mensal {
+    display: flex;
+    gap: var(--space-xl);
+}
+
+.value {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.value .img {
+    padding: 20px;
+    border-radius: 100%;
+    background-color: color-mix(in srgb, var(--success) 60%, transparent);
+    border-radius: var(--space-xxl);
+}
+
+.value img {
+    width: 20px;
+    height: 15px;
+}
+
+.value span {
+    color: var(--success);
+    font-weight: bold;
+}
+
+.red .img {
+    background-color: color-mix(in srgb, var(--red) 60%, transparent);
+    transform: rotate(180deg);
+}
+
+.red span {
+    color: var(--red);
+    font-weight: bold;
+}
+
+.modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: var(--space-xl);
+}
+
+.conteiner {
+    padding: var(--space-xl);
+    width: 400px;
+    background-color: var(--white);
+    box-shadow: 0 1px 8px 10px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    display: none;
+    position: absolute;
+    top: 30%;
+}
+
+form input {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: var(--space-sm);
+    width: 100%;
+    padding: 10px;
+    border: solid 1px var(--neutral);
+    border-radius: 10px;
+}
+
+form legend {
+    color: var(--success);
+    font-size: var(--text-18);
+    font-weight: bold;
+    margin-bottom: var(--space-sm);
+}
+
+.conteiner .conteiner_btn {
+    display: flex;
+    align-content: center;
+    gap: var(--space-sm);
+    margin-top: var(--space-xl);
+}
+
+.conteiner_btn button {
+    background-color: var(--success);
+    color: var(--white);
+    padding: 10px 30px;
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.conteiner_despesas {
+    padding: var(--space-xl);
+    width: 400px;
+    background-color: var(--white);
+    box-shadow: 0 1px 8px 10px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    display: none;
+    position: absolute;
+    top: 30%;
+}
+
+form small {
+    display: block;
+    margin-top: 5px;
+    color: var(--red);
+    font-size: var(--text-14);
+}
+
+.conteiner_despesas .conteiner_btn button {
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: 0;
+    cursor: pointer;
+    background-color: var(--red);
+    color: var(--white);
+    margin-top: var(--space-xl);
+}
+
+.conteiner_despesas form legend {
+    color: var(--red);
+    font-size: var(--text-18);
+    font-weight: bold;
+    margin-bottom: var(--space-sm);
+}
+
+.activeRenda {
+    display: block;
+}
+
+.activeDespesa {
+    display: block;
+}
+
+#listamovimentacao li {
+    list-style: none;
+}
+
+.movimentacaoes {
+    max-width: 1024px;
+    margin: var(--space-xl) auto;
+    padding: var(--space-xl);
+    background-color: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.1);
+}
+
+.movimentacaoes nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-xl);
+}
+
+.movimentacaoes h2 {
+    font-size: var(--text-24);
+    font-weight: bold;
+}
+
+.movimentacaoes ul {
+    display: flex;
+    gap: var(--space-sm);
+    list-style: none;
+}
+
+.movimentacaoes nav li {
+    padding: 6px 16px;
+    background-color: var(--input);
+    border-radius: 20px;
+    font-size: var(--text-14);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.listamovimentacao {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    list-style: none;
+    padding: 0;
+}
+
+.listamovimentacao li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-md) var(--space-lg);
+    border-radius: 12px;
+    background-color: #F0FDF4;
+    border: 1px solid #BBF7D0;
+}
+
+.item-esquerdo h3 {
+    font-size: var(--text-18);
+    font-weight: 700;
+    color: #14532D;
+    margin: 0;
+}
+
+.item-esquerdo p {
+    font-size: var(--text-14);
+    color: var(--success);
+    margin-top: 4px;
+}
+
+.item-direito {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: var(--space-sm);
+}
+
+.valor-renda {
+    font-size: var(--text-18);
+    font-weight: bold;
+    color: var(--success);
+}
+
+.btn-deletar {
+    padding: 4px 12px;
+    background-color: transparent;
+    border: 1px solid var(--red);
+    color: var(--red);
+    border-radius: 6px;
+    font-size: var(--text-14);
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-deletar:hover {
+    background-color: var(--red);
+    color: var(--white);
+}
+
+.listamovimentacao li.card-despesa {
+    background-color: color-mix(in srgb, var(--red) 8%, transparent);
+    border: 1px solid color-mix(in srgb, var(--red) 30%, transparent);
+}
+
+.card-despesa .item-esquerdo h3 {
+    color: color-mix(in srgb, var(--red) 80%, black);
+}
+
+.card-despesa .item-esquerdo p {
+    color: var(--red);
+}
+
+.valor-despesa {
+    font-size: var(--text-18);
+    font-weight: bold;
+    color: var(--red);
+}
+
+@media (max-width: 480px) {
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 20px;
+        cursor: pointer;
+    }
+
+    .menu-toggle.active .menu:nth-child(1) {
+        background-color: red;
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .menu-toggle.active .menu:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active .menu:nth-child(3) {
+        background-color: red;
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    header .btn-desktop {
+        display: none;
+    }
+
+    .navegation-mobile button {
+        display: flex;
+        align-items: center;
+        gap: var(--space-sm);
+        padding: var(--space-md);
+        width: 100%;
+        background-color: var(--neutral);
+        border: 0;
+        border-radius: 10px;
+        font-weight: 600;
+    }
+
+    .saldo {
+        flex-direction: column;
+        gap: var(--space-xl);
+        align-items: flex-start;
+    }
+
+    .resumo-mensal {
+        flex-direction: column;
+        gap: var(--space-md);
+        width: 100%;
+    }
+
+    .conteiner,
+    .conteiner_despesas {
+        width: 90%;
+        left: 5%;
+        top: 20%;
+    }
+}
