@@ -1,0 +1,32 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+:root {
+    --primary: #434655;
+    --success: #16A34A;
+    --red: #DC2626;
+    --neutral: #C3C6D7;
+    --white: #FFF;
+    --input: #E2E7FF;
+
+
+    --text-40: 40px;
+    --text-24: 24px;
+    --text-18: 18px;
+    --text-16: 16px;
+    --text-14: 14px;
+
+    --space-sm: 8px;
+    --space-md: 16px;
+    --space-lg: 24px;
+    --space-xl: 32px;
+    --space-xxl: 48px;
+
+}
