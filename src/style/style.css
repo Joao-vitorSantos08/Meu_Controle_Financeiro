@@ -55,7 +55,7 @@ header button:hover {
     background-color: var(--white);
     padding: var(--space-xl);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-     transition: 0.5s ease;
+    transition: 0.5s ease;
 }
 
 .navegation-mobile.show {
@@ -358,6 +358,73 @@ form small {
     font-size: var(--text-18);
     font-weight: bold;
     color: var(--red);
+}
+
+@media (max-width: 960px) {
+    main {
+        padding: var(--space-lg);
+    }
+
+    .saldo h1 {
+        font-size: 32px;
+    }
+
+    .resumo-mensal {
+        gap: var(--space-lg);
+    }
+
+    .value .img {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .saldo {
+        flex-direction: column;
+        align-items: stretch;
+        gap: var(--space-xl);
+    }
+
+    .resumo-mensal {
+        justify-content: space-between;
+    }
+
+    .movimentacaoes nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-md);
+    }
+
+    .conteiner,
+    .conteiner_despesas {
+        width: 80%;
+        left: 10%;
+    }
+}
+
+@media (max-width: 600px) {
+    .resumo-mensal {
+        flex-direction: column;
+        gap: var(--space-md);
+    }
+
+    .saldo h1 {
+        font-size: 28px;
+    }
+
+    .saldo .btn {
+        flex-direction: column;
+    }
+
+    .saldo .btn button {
+        width: 100%;
+    }
+
+    .conteiner,
+    .conteiner_despesas {
+        width: 86%;
+        left: 7%;
+    }
 }
 
 @media (max-width: 480px) {
